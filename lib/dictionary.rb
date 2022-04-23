@@ -36,7 +36,10 @@ class Dictionary
   end
 
   def translate(character)
-    #edge case for character not in dictionary?
-    @to_braille[character]
+    if @to_braille.include?(character) == false
+      "Error! Character not found"
+    else
+      @to_braille[character]
+    end
   end
 end
