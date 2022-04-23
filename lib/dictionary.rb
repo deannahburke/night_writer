@@ -35,4 +35,7 @@ class Dictionary
     }
   end
 
+  def translate(character)
+    @to_braille[character]
+  end
 end
