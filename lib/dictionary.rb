@@ -35,7 +35,7 @@ class Dictionary
     }
   end
 
-  def translate(character)
+  def look_up(character)
     if @to_braille.include?(character) == false
       "Error! Character not found"
     else
