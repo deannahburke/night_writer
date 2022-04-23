@@ -5,7 +5,12 @@ RSpec.describe Dictionary do
     dictionary = Dictionary.new
 
     expect(dictionary).to be_a(Dictionary)
-    expect(dictionary).to be_a(Hash)
+  end
+
+  it "has attributes"do
+    dictionary = Dictionary.new
+
+    expect(dictionary.to_braille).to be_a(Hash)
   end
 
 
