@@ -4,7 +4,7 @@ message.close
 
 user_input = ARGV[1]
 braille = File.open(ARGV[1], 'w') #creates file object
-braille.write(incoming_text.length)
+braille.write(incoming_text)
 braille.close
 
 character_count = incoming_text.length

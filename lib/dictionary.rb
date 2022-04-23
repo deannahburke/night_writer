@@ -1,7 +1,9 @@
 class Dictionary
-  attr_reader :to_braille
+  attr_reader :to_braille,
+              :incoming_text
 
-  def initialize
+  def initialize(incoming_text)
+    @incoming_text = incoming_text
     @to_braille = {
       "a" => ["0.", "..",".."],
       "b" => ["0.", "0.", ".."],
