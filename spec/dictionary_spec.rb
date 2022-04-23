@@ -26,10 +26,11 @@ RSpec.describe Dictionary do
   it "can translate incoming text" do
     dictionary = Dictionary.new('a')
 
-    expect(dictionary.translate('a')).to eq(["0.", "..", ".."])
-    expect(dictionary.translate('k')).to eq(["0.", "..", "0."])
-    expect(dictionary.translate('u')).to eq(["0.", "..", "00"])
+    expect(dictionary.translate("a")).to eq(["0.", "..", ".."])
+    expect(dictionary.translate("k")).to eq(["0.", "..", "0."])
+    expect(dictionary.translate("u")).to eq(["0.", "..", "00"])
     expect(dictionary.translate(" ")).to eq(["..", "..", ".."])
+    expect(dictionary.translate("A")).to eq("Error! Character not found")
   end
 
 end
