@@ -28,8 +28,8 @@ RSpec.describe Dictionary do
 
     expect(dictionary.translate('a')).to eq(["0.", "..", ".."])
     expect(dictionary.translate('k')).to eq(["0.", "..", "0."])
-    expect(dictionary.to_braille['u']).to eq(["0.", "..", "00"])
-    expect(dictionary.to_braille[" "]).to eq(["..", "..", ".."])
+    expect(dictionary.translate('u')).to eq(["0.", "..", "00"])
+    expect(dictionary.translate(" ")).to eq(["..", "..", ".."])
   end
 
 end

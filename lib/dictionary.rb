@@ -36,6 +36,7 @@ class Dictionary
   end
 
   def translate(character)
+    #edge case for character not in dictionary?
     @to_braille[character]
   end
 end
