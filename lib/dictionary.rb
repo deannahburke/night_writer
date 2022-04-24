@@ -1,9 +1,8 @@
 class Dictionary
-  attr_reader :to_braille,
-              :incoming_text
+  attr_reader :to_braille
 
-  def initialize(incoming_text)
-    @incoming_text = incoming_text
+
+   def initialize
     @to_braille = {
       "a" => ["0.", "..",".."],
       "b" => ["0.", "0.", ".."],
@@ -36,14 +35,5 @@ class Dictionary
 
     # @to_english = @to_braille.invert
 
-  end
-
-  #eventually call .translate in runner?  in new class, format to print correctly, can only do one character so far
-  def look_up(character)
-    if @to_braille.include?(character) == false
-      "Error! Character not found"
-    else
-      @to_braille[character]#.join?  gets rid of array stuff
-    end
   end
 end
