@@ -39,7 +39,7 @@ class Dictionary
     if @to_braille.include?(character) == false
       "Error! Character not found"
     else
-      p @to_braille[character]
+      @to_braille[character]
     end
   end
 end

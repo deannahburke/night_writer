@@ -23,7 +23,7 @@ RSpec.describe Dictionary do
     expect(dictionary.to_braille[" "]).to eq(["..", "..", ".."])
   end
 
-  it "can translate incoming text" do
+  it "can look up braille character of incoming text" do
     dictionary = Dictionary.new('a')
 
     expect(dictionary.look_up("a")).to eq(["0.", "..", ".."])
