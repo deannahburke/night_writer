@@ -1,1 +1,1 @@
-Error! Character not found
+["0.", "..", ".."]

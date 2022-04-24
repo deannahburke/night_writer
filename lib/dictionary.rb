@@ -35,6 +35,7 @@ class Dictionary
     }
   end
 
+  #move this method to translate? call translate in runner?  would need to format to print correctly, can only do one character so far 
   def look_up(character)
     if @to_braille.include?(character) == false
       "Error! Character not found"
