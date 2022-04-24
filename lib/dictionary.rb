@@ -33,14 +33,17 @@ class Dictionary
       "z" => ["0.", ".0", "00"],
       " " => ["..", "..", ".."]
     }
+
+    # @to_english = @to_braille.invert
+
   end
 
-  #move this method to translate? call translate in runner?  would need to format to print correctly, can only do one character so far 
+  #eventually call .translate in runner?  in new class, format to print correctly, can only do one character so far
   def look_up(character)
     if @to_braille.include?(character) == false
       "Error! Character not found"
     else
-      @to_braille[character]
+      @to_braille[character]#.join?  gets rid of array stuff
     end
   end
 end
