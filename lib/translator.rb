@@ -1,11 +1,7 @@
 class Translator
-  attr_reader :incoming_text,
-              :braille,
-              :dictionary
+   attr_reader :dictionary
 
   def initialize
-    @incoming_text = incoming_text
-    @braille = braille
     @dictionary = Dictionary.new
   end
 
