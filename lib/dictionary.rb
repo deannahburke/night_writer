@@ -32,7 +32,7 @@ class Dictionary
       " " => ["..", "..", ".."]
     }
 
-    # @to_english = @to_braille.invert
+    # 'context iteration 3' @to_english = @to_braille.invert
 
   end
 end

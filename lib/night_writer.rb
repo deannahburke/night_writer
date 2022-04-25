@@ -7,9 +7,9 @@ message.close
 
 # user_input = ARGV[1]
 braille = File.open(ARGV[1], 'w')
-translator = Translator.new 
+translator = Translator.new
 
-braille.write(translator.translate(incoming_text))
+braille.write(translator.format_braille(incoming_text))
 braille.close
 
 character_count = incoming_text.length
