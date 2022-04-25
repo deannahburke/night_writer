@@ -26,8 +26,11 @@ RSpec.describe Translator do
     expect(translator.format_braille('A')).to eq("Error! Character not found")
   end
 
-  xit "can translate multiple characters" do
+  it "can translate multiple characters" do
+    translator = Translator.new
 
+    expect(translator.format_braille('ab')).to eq("0.\n..\n..", "0.\n0.\n..")
+    )
   end
 
 
