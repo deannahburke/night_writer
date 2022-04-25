@@ -3,20 +3,13 @@ require './lib/translator'
 
 RSpec.describe Translator do
   it "exists" do
-    translator = Translator.new('a', ["0.", "..",".."])
+    translator = Translator.new
 
     expect(translator).to be_a(Translator)
   end
 
-  it "has attributes" do
-    translator = Translator.new('a', ["0.", "..",".."])
-
-    expect(translator.incoming_text).to eq('a')
-    expect(translator.braille).to eq(["0.", "..",".."])
-  end
-
   it "can translate a single character" do
-    translator = Translator.new('a', ["0.", "..",".."])
+    translator = Translator.new
 
     expect(translator.translate('a')).to eq(["0.", "..",".."])
     expect(translator.translate('k')).to eq(["0.", "..", "0."])
@@ -24,5 +17,16 @@ RSpec.describe Translator do
     expect(translator.translate(" ")).to eq(["..", "..", ".."])
     expect(translator.translate("A")).to eq("Error! Character not found")
   end
+
+  xit "can split braille character into rows" do
+    translator = Translator.new
+
+    expect(translator.convert_braille(incoming_text)).to eq()
+  end
+
+  xit "can translate multiple characters" do
+
+  end
+
 
 end
