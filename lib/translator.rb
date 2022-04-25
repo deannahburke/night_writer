@@ -6,25 +6,28 @@ class Translator
   end
 
   def translate(character)
-    if @dictionary.to_braille.include?(character) == false
-      "Error! Character not found"
-    else
-      @dictionary.to_braille[character]
+    message = character.chars
+    message.map do |character|
+      if @dictionary.to_braille.include?(character) == false
+        "Error! Character not found"
+      else
+        @dictionary.to_braille[character]
+      end
     end
   end
 
   def format_braille(character)
-    if @dictionary.to_braille.include?(character) == false
-      "Error! Character not found"
-    else
+    test = translate(character)#.map do for top, middle, bottom
+    finished_letter = ""
+    test.each do |element|
       top = ""
       middle = ""
       bottom = ""
-      top << @dictionary.to_braille[character][0]
-      middle << @dictionary.to_braille[character][1]
-      bottom  << @dictionary.to_braille[character][2]
-      finished_letter =("#{top}\n""#{middle}\n""#{bottom}")
+      top << element[0]
+      middle << element[1]
+      bottom << element[2]
+      finished_letter << ("#{top}\n""#{middle}\n""#{bottom}\n")
     end
+    finished_letter
   end
-
 end
