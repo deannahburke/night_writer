@@ -16,6 +16,10 @@ class Translator
     end
   end
 
+  def top_row(character)
+    top = translate(character).map {|element| element[0]}.join
+  end
+
   def format_braille(character)
     test = translate(character)#.map do for top, middle, bottom
     finished_letter = ""

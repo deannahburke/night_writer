@@ -19,11 +19,20 @@ RSpec.describe Translator do
 
   it "can split braille characters into top row" do
     translator = Translator.new
-    
+
     expect(translator.top_row('a')).to eq('0.')
     expect(translator.top_row('b')).to eq('0.')
     expect(translator.top_row('ab')).to eq('0.0.')
   end
+
+  it "can split braille characters into middle row" do
+    translator = Translator.new
+
+    expect(translator.middle_row('a')).to eq('..')
+    expect(translator.middle_row('b')).to eq('0.')
+    expect(translator.middle_row('ab')).to eq('..0.')
+  end
+
 
   xit "can split braille character into rows" do
     translator = Translator.new
