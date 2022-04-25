@@ -18,10 +18,10 @@ RSpec.describe Translator do
     expect(translator.translate("A")).to eq("Error! Character not found")
   end
 
-  xit "can split braille character into rows" do
+  it "can split braille character into rows" do
     translator = Translator.new
 
-    expect(translator.convert_braille(incoming_text)).to eq()
+    expect(translator.top('a')).to eq("0.")
   end
 
   xit "can translate multiple characters" do
