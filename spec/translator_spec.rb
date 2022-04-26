@@ -49,13 +49,4 @@ RSpec.describe Translator do
     expect(translator.format_braille('a')).to eq("0.\n..\n..\n")
     expect(translator.format_braille('k')).to eq("0.\n..\n0.\n")
   end
-
-  it "can break lines of Braille at 40 characters" do
-    translator = Translator.new
-
-    expect(translator.format_braille(the dude abides).over_40?).to eq(false)
-    expect(translator.format_braille(im the dude man so thats what you call me).over_40?).to eq(true)
-  end
-
-
 end

@@ -37,6 +37,5 @@ class Translator
     middle << middle_row(character)
     bottom << bottom_row(character)
     finished_format << ("#{top}\n""#{middle}\n""#{bottom}\n")
-    # require "pry";binding.pry
   end
 end
