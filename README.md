@@ -2,7 +2,7 @@
 
 ## A project by Deannah Burke
 
-  goal: use Ruby to create a program to translate English to Braille, and Braille back to English 
+  goal: use Ruby to create a program to first translate English to Braille, and then Braille to English 
   
   ```ruby 
   backend final project == 
