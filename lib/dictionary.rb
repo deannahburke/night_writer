@@ -1,5 +1,6 @@
 class Dictionary
-  attr_reader :to_braille
+  attr_reader :to_braille,
+              :to_english
 
    def initialize
     @to_braille = {
@@ -32,7 +33,6 @@ class Dictionary
       " " => ["..", "..", ".."]
     }
 
-    # 'context iteration 3' @to_english = @to_braille.invert
-
+    @to_english = @to_braille.invert
   end
 end

@@ -25,11 +25,11 @@ RSpec.describe Dictionary do
   it "can read inverted English hash" do
     dictionary = Dictionary.new
 
-    expect(dictionary.to_english["0.", "..",".."]).to eq("a")
+    expect(dictionary.to_english).to be_a(Hash)
+    expect(dictionary.to_english[["0.", "..",".."]]).to eq("a")
+    expect(dictionary.to_english[["0.", "..", "0."]]).to eq("k")
+    expect(dictionary.to_english[["0.", "..", "00"]]).to eq("u")
+    expect(dictionary.to_english[["..", "..", ".."]]).to eq(" ")
   end
-
-
-
-
 
 end
