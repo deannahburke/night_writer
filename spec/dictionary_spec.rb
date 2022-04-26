@@ -16,10 +16,20 @@ RSpec.describe Dictionary do
   it "can read alphabet hash" do
     dictionary = Dictionary.new
 
-    expect(dictionary.to_braille['a']).to eq(["0.", "..", ".."])
-    expect(dictionary.to_braille['k']).to eq(["0.", "..", "0."])
-    expect(dictionary.to_braille['u']).to eq(["0.", "..", "00"])
+    expect(dictionary.to_braille["a"]).to eq(["0.", "..", ".."])
+    expect(dictionary.to_braille["k"]).to eq(["0.", "..", "0."])
+    expect(dictionary.to_braille["u"]).to eq(["0.", "..", "00"])
     expect(dictionary.to_braille[" "]).to eq(["..", "..", ".."])
   end
+
+  it "can read inverted English hash" do
+    dictionary = Dictionary.new
+
+    expect(dictionary.to_english["0.", "..",".."]).to eq("a")
+  end
+
+
+
+
 
 end
