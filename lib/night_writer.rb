@@ -1,13 +1,15 @@
+require './lib/dictionary.rb'
+require './lib/translator.rb'
+
+translator = Translator.new
+
 message = File.open(ARGV[0], 'r')
-incoming_text = message.read
+incoming_text = message.read.strip
 message.close
 
-user_input = ARGV[1]
-braille = File.open(ARGV[1], 'w') #creates file object
-braille.write(incoming_text.length)
+braille = File.open(ARGV[1], 'w')
+braille.write(translator.format_braille(incoming_text))
 braille.close
 
 character_count = incoming_text.length
-
-
-p "Created '#{user_input}' containing #{character_count} characters"
+p "Created '#{ARGV[1]}' containing #{character_count} characters"
