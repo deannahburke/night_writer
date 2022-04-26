@@ -9,7 +9,7 @@ class Translator
     message = character.chars
     message.map do |character|
       if @dictionary.to_braille.include?(character) == false
-        "Error! Character not found"
+        "NIL"
       else
         @dictionary.to_braille[character]
       end
