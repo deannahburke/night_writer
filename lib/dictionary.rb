@@ -34,5 +34,6 @@ class Dictionary
     }
 
     @to_english = @to_braille.invert
+    
   end
 end

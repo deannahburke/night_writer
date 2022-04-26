@@ -1,13 +1,11 @@
-require './lib/dictionary'
-require './lib/reverse_translator'
+class ReverseTranslator
+  attr_reader :dictionary
 
-RSpec.describe ReverseTranslator do
-  it "exists" do
-    reverse_translator = ReverseTranslator.new
-
-    expect(reverse_translator).to be_a(ReverseTranslator)
+  def initialize
+    @dictionary = Dictionary.new
   end
 
-  
-
+  def translate(character)
+    @dictionary.to_english[character]
+  end
 end
