@@ -14,7 +14,7 @@ RSpec.describe Translator do
     expect(translator.translate('a')).to eq([["0.", "..",".."]])
     expect(translator.translate(' ')).to eq([["..", "..", ".."]])
     expect(translator.translate('ab')).to eq([["0.", "..",".."], ["0.", "0.", ".."]])
-    expect(translator.translate('A')).to eq(["Error! Character not found"])
+    expect(translator.translate('A')).to eq(["NIL"])
   end
 
   it "can split braille characters into top row" do
@@ -53,7 +53,8 @@ RSpec.describe Translator do
   it "can break lines of Braille at 40 characters" do
     translator = Translator.new
 
-
+    expect(translator.format_braille(the dude abides).over_40?).to eq(false)
+    expect(translator.format_braille(im the dude man so thats what you call me).over_40?).to eq(true)
   end
 
 

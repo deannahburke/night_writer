@@ -9,7 +9,7 @@ class Translator
     message = character.chars
     message.map do |character|
       if @dictionary.to_braille.include?(character) == false
-        "Error! Character not found"
+        "NIL"
       else
         @dictionary.to_braille[character]
       end
@@ -37,5 +37,6 @@ class Translator
     middle << middle_row(character)
     bottom << bottom_row(character)
     finished_format << ("#{top}\n""#{middle}\n""#{bottom}\n")
+    # require "pry";binding.pry
   end
 end
