@@ -49,10 +49,4 @@ RSpec.describe Translator do
     expect(translator.format_braille('a')).to eq("0.\n..\n..\n")
     expect(translator.format_braille('k')).to eq("0.\n..\n0.\n")
   end
-
-  it "can split lines of 80 characters" do
-    translator = Translator.new
-
-    expect(translator.break_line).to be_a(Array)
-  end
 end
